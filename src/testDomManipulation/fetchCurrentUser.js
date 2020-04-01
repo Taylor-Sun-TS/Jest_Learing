@@ -25,7 +25,7 @@ const fetchCurrentUser = function(callback) {
                 loggedIn: false,
             };
 
-            callback();
+            callback(user);
             resolve(user);
         });
     });
