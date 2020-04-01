@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:coverage": "jest --collect-coverage",
+    "test": "jest --verbose --colors",
+    "test:coverage": "jest --collect-coverage --colors",
     "updateSnapshot": "jest --updateSnapshot"
   },
   "author": "",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.8.7",
     "jest": "^25.1.0",
     "jquery": "^3.4.1"

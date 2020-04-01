@@ -1,12 +1,18 @@
-import { sum } from "./sum";
-// const { sum } = require("./sum");
+import { sum } from './sum';
+
+jest.mock('./sum');
+sum.mockImplementation(() => 1);
 
 describe('this is a test block', () => {
     test("test 1 + 2", () => {
+        const { sum } = jest.requireActual('./sum');
+
         expect(sum(1, 2)).toBe(3);
     });
 
     test("test 2 + 2", () => {
+        const { sum } = jest.requireActual('./sum');
+
         expect(sum(2, 2)).toBe(4);
     });
 
@@ -18,10 +24,10 @@ describe('this is a test block', () => {
 
 describe("test mocking module", () => {
     test("test 1 + 2", () => {
-        expect(sum(1, 2)).toBe(3);
+        expect(sum(1, 2)).toBe(1);
     });
 
     test("test 2 + 2", () => {
-        expect(sum(2, 2)).toBe(4);
+        expect(sum(2, 2)).toBe(1);
     });
 });
