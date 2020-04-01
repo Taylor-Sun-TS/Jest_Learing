@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test mock function test snapshot 1 1`] = `
+"
+        <a className=\\"normal\\" href=\\"http://www.test1.com\\" >
+          test1
+        </a>
+        "
+`;
+
+exports[`test mock function test snapshot 2 1`] = `"<a className=\\"normal\\" href=\\"http://www.test2.com\\"> test2 </a>"`;
