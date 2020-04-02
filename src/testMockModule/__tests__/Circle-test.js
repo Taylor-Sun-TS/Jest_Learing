@@ -22,6 +22,20 @@ describe('test Circle class', () => {
         expect(circle.radius).toEqual(raduis);
     })
 
+    it('test setter and getter radius is called', () => {
+        const circle = new Circle(defaultRadius);
+        const spySetter = jest.spyOn(circle, 'radius', 'set');
+        const spyGetter = jest.spyOn(circle, 'radius', 'get');
+
+        const raduis = 2;
+
+        circle.radius = raduis;
+        circle.radius;
+
+        expect(spySetter).toHaveBeenCalledWith(raduis);
+        expect(spyGetter).toHaveBeenCalled();
+    })
+
     it('test getPerimeter', () => {
         const radius = 2;
         const circle = new Circle(radius);
